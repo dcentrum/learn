@@ -49,30 +49,30 @@
   - ERC 721
   - ERC 777
   - ERC 820
-# 16. Initial Coin Offering
+# 9. Initial Coin Offering
   - Fund Raising
   - ICO
   - DAICO
-# 9. Transaction
+# 10. Transaction
   - Transaction Flow
   - Transaction Hash
   - Gas Price
   - Gas Consumed
-# 10. Connecting to ethereum clients
+# 11. Connecting to ethereum clients
   - web3js	
 	- web3j
 	- Nethereum
 	- ethereum-ruby
-# 11. Use cases
+# 12. Use cases
   - Decentralized Autonomous Organization
   - Decentralized Autonomous Marketplace
   - Digital Tokens
   - Digital Identity
   - Decentralized Voting
-# 12. Smart Contracts
+# 13. Smart Contracts
   - What is a smart contract
   - Contract Structure  
-# 13. Solidity
+# 14. Solidity
   - Language overview
   - Contract Structure
   - Datatypes
@@ -83,14 +83,14 @@
   - Memory types
   - Arrays and Mappings
   - Functions and Parameters
-# 14. Application Developments (DApps)
+# 15. Application Developments (DApps)
   - What is DApp
   - Truffle
   - Contract Compile
   - Contract Deploy
   - Application Binary Interface (ABI)
   - Web3Js API
-# 15. Sample Application Development (DApps)
+# 16. Sample Application Development (DApps)
   - Use case
   - Technologies Stack
   - Server
