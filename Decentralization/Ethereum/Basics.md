@@ -8,6 +8,8 @@ This document walks you through the important topics to learn ethereum in easy a
   - Blockchain Types
   - Types of Network
   - Type of Nodes
+  - Block structire
+  - Merkle Trees
 # 3. Ethereum Client
   - go-ethereum
   - pyethapp
@@ -58,6 +60,7 @@ This document walks you through the important topics to learn ethereum in easy a
   - DAICO
 # 10. Transaction
   - Transaction Flow
+  - Signing a Transaction
   - Transaction Hash
   - Gas Price
   - Gas Consumed
