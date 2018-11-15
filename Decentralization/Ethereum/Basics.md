@@ -1,3 +1,6 @@
+## Objective
+This document walks you through the important topics to learn ethereum in easy and organized way
+
 # 1. Ethereum Introduction
   - What is Ethereum
   - How does it work
