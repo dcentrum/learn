@@ -84,3 +84,14 @@
 
 - APIs, Events, SDKs
   - Multi-language native SDKs allow developers to write DLT apps 
+# 13. Ledger
+- In Hyperledger fabric State database options include LevelDB and Couch DB.
+- LevelDB is the default state database embedded in the peer process and stores chaincode data as key-value pairs. 
+- CouchDB can store any binary data that is modeled in chaincode .But as a JSON document store, CouchDB additionally enables rich query against the chaincode data, when chaincode values (e.g. assets) are modeled as JSON data.
+# 14. Bootstrapping a Network
+- Decide on members (MSPs) controlling the ordering service
+ – Set up MSP configuration for each member (root certs, signing certs, key, admins)
+ – Set up policies governing the network (who has privilege to modify config and create channels)
+ – Start up orderers with the configuration
+- Each member decides on the number of peers to participate – For each peer, issue peer identity (local MSP configuration) and start it up
+- At this point, we have a network of peers and orderers – Peers are not yet connected to orderers nor to each other
