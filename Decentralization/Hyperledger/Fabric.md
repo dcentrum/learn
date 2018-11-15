@@ -95,3 +95,21 @@
  – Start up orderers with the configuration
 - Each member decides on the number of peers to participate – For each peer, issue peer identity (local MSP configuration) and start it up
 - At this point, we have a network of peers and orderers – Peers are not yet connected to orderers nor to each other
+# 15. Setting up Channels, Policies, and Chaincodes
+- Depending on the business network, 1 or more channels may be required 
+- To create a channel, send a configuration transaction to the ordering service specifying members of the channel, ACL policies, anchor peers – The configuration becomes part of the genesis block of the channel – Then notify members to join the channel (a peer may join multiple channels)
+- Deploy chaincodes on the channel with appropriate endorsement policy
+- Now the network is ready for transacting
+# 16. Consensus Redefined
+- Consensus = Transaction Endorsement + Ordering + Validation 
+- Endorsement: Each stakeholder decides whether to accept or reject a transaction
+- Ordering: Sort all transactions within a period into a block to be committed in that order
+- Validation: Verify transaction endorsement satisfied the policy and transaction transformation is valid according to multiversion   concurrency control (MVCC)
+# 17. Transaction Flow
+- Step 1/7 – Propose Transaction
+- Step 2/7 – Execute Proposal
+- Step 3/7 – Proposal Response
+- Step 4/7 – Order Transaction
+- Step 5/7 – Deliver Transaction
+- Step 6/7 – Validate Transaction
+- Step 7/7 –Notify Transaction
