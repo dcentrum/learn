@@ -26,9 +26,9 @@
 # 5. Channel
   - A data partitioning mechanism to control transaction visibility only to stakeholders 
   - Consensus takes place within a channel by members of the channel 
-  - Other members on the network are not allowed to access the channel and will not see transactions on the channel 
+   - Other members on the network are not allowed to access the channel and will not see transactions on the channel 
   - A chaincode may be deployed on multiple channels, each instance is isolated within its channel
-  - A chaincode may query another chaincode in other channel (ACL applied)
+   - A chaincode may query another chaincode in other channel (ACL applied)
 # 6. Certificate Authority ( CA )
 - A certificate authority (CA) is a trusted entity that issues electronic documents that verify a digital entity's identity on the Internet. The electronic documents, which are called digital certificates, are an essential part of secure communication and play an important part in the public key infrastructure
   - Default implementation of the Membership Services Provider Interface.
@@ -38,10 +38,10 @@
   - Supports HSM
 # 7. Peer
   - A Peer is a node on the network maintaining state of the ledger and managing chaincodes 
-• Any number of Peers may participate in a network
- • A Peer can be an endorser, committer and/or submitter (submitter has not been implemented). An endorser is always a committer
-	 – An endorser executes and endorses transactions
-	 – A committer verifies endorsements and validates transaction results 
-• A Peer manages event hub and deliver events to the subscribers 
-• Peers form a peer-to-peer gossip network
+  - Any number of Peers may participate in a network
+  - A Peer can be an endorser, committer and/or submitter (submitter has not been implemented). An endorser is always a committer
+   – An endorser executes and endorses transactions
+   – A committer verifies endorsements and validates transaction results 
+  - A Peer manages event hub and deliver events to the subscribers 
+  - Peers form a peer-to-peer gossip network
 
