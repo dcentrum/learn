@@ -37,11 +37,50 @@
   - Supports LDAP for user authentication
   - Supports HSM
 # 7. Peer
-  - A Peer is a node on the network maintaining state of the ledger and managing chaincodes 
-  - Any number of Peers may participate in a network
-  - A Peer can be an endorser, committer and/or submitter (submitter has not been implemented). An endorser is always a committer
+- A Peer is a node on the network maintaining state of the ledger and managing chaincodes 
+- Any number of Peers may participate in a network
+- A Peer can be an endorser, committer and/or submitter (submitter has not been implemented). An endorser is always a committer
    – An endorser executes and endorses transactions
    – A committer verifies endorsements and validates transaction results 
-  - A Peer manages event hub and deliver events to the subscribers 
-  - Peers form a peer-to-peer gossip network
+- A Peer manages event hub and deliver events to the subscribers 
+- Peers form a peer-to-peer gossip network
+# 8. Orderer
+- A group of Orderers runs a communication service, called ordering service, to provide atomic broadcast
+- Provides ordering of operations, before the data is committed in the ledger it has to pass through the orderer.
+- Orderer will creates the blocks, that will be part of the Blockchain.
+- Once the block is full, orderer will send the blocks to the peers, peers will commit to the block to the ledger.
+- Ordering service is responsible for:
+  - Verification.
+  - Security.
+  - Policy management.
+# 9. Transaction Endorsement
+- An endorsement is a signed response of the result of a transaction execution 
+- An endorsement policy encapsulates the requirement for a transaction to be accepted by the stakeholders, either explicit or implicit 	    – A signature from both member1 and member2
+	 – Either a signature from both member1 and member2 or a signature from member3 
+	 – A signature from John Doe
+- The endorsement policy is specified during a chaincode instantiation on a channel; each channel-chaincode may have different endorsement policy
+# 10. Chaincode
+- A chaincode is programmatic code deployed on the network, where it is executed and validated by chain validators together during the consensus process.  
+- Developers can use chaincode's to develop business contracts, asset definitions, and collectively-managed decentralized applications
+- There are generally two ways to develop business contracts: the first way is to code individual contracts into standalone instances of chaincode; the second way, and probably the more efficient way, is to use chaincode to create decentralized applications that manage the life cycle of one or multiple types of business contracts, and let end users instantiate instances of contracts within these applications. 
+- Chaincode can be written in any programming language and executed in containers. The first fully supported chaincode language is Golang. 
+# 11. Membership Service Providers(MSP)
+- An abstraction of identity provider
+	 – <MSP.id, MSP.sign, MSP.verify, MSP.validateid, MSP.admin>
+	 – govern application, endorser and orderer identities
+- Used as building blocks for access control frameworks 
+	– at the system level (read/write access on system controls, 	    and channel creation) – at the channel level (read/write     	     access), 
+	– at the chaincode level (invocation access) 
+- Represent a consortium or a member
+# 12. Hyperledger Architecture
+- IDENTITY
+  - Pluggable, Membership, Privacy and Auditability of transactions.
 
+- LEDGER | TRANSACTIONS
+  - Distributed transactional ledger whose state is updated by consensus of stakeholders
+
+- SMART-CONTRACT
+  - “Programmable Ledger”, provide ability to run business logic against the blockchain (aka smart contract)
+
+- APIs, Events, SDKs
+  - Multi-language native SDKs allow developers to write DLT apps 
