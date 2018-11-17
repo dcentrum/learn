@@ -58,6 +58,7 @@ This document walks you through the important topics to learn ethereum in easy a
   - Fund Raising
   - ICO
   - DAICO
+  - DAO
 # 10. Transaction
   - Transaction Flow
   - Signing a Transaction
